@@ -878,6 +878,7 @@ public class GLCanvas extends GLSurfaceView
         intBuffer.position(0);
 
         try {
+            glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
             glReadPixels(x, y, w, h, GL_RGBA, GL_UNSIGNED_BYTE, intBuffer);
             int offset1, offset2;
             for (int i = 0; i < h; i++) {
