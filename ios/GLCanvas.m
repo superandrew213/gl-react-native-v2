@@ -443,7 +443,7 @@ RCT_NOT_IMPLEMENTED(-init)
       error = [NSString stringWithFormat:@"Unsupported capture type '%@'", config.type];
     }
     else if (isBase64) {
-      NSString *base64 = [frameData base64EncodedStringWithOptions: NSDataBase64Encoding64CharacterLineLength];
+      NSString *base64 = [frameData base64EncodedStringWithOptions:0];
       result = [NSString stringWithFormat:@"data:image/%@;base64,%@", config.type, base64];
     }
     else if (isFile) {
